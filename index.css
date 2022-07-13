@@ -1,0 +1,126 @@
+/* GENERAL */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a, a:active, a:focus{
+    color: black;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+a:hover{
+    color: #F9AC66;
+    transition: 0.2s ease;
+}
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    font-size: 25px;
+    width: auto;
+}
+
+/* Calc container */
+.container{
+    height: 80vh;
+    width: auto;
+    display: grid;
+    place-items: center;
+}
+                            /* Night mode */
+.calculator.dark{
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px black;
+    background: black;
+    color: white;
+    transition: 0.2s ease;
+}
+.calculator{
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px black;
+    background: white;
+    color: black;
+    transition: 0.2s ease;
+}
+
+/* Calc inside container */
+                            /* Nightmode toggle */
+.theme-toggler{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+}
+.theme-toggler.active{
+    color: #333;
+}
+.theme-toggler.actve::before{
+    background: white;
+}
+.theme-toggler::before{
+    content: '';
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: #333;
+    z-index: -1;
+    color: white;
+}
+                            /* Display above keyboard */
+#display{
+    margin: 0 10px;
+    height: 150px;
+    width: auto;
+    max-width: 270px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 40px;
+    margin-bottom: 20px;
+    overflow-x: hidden;
+}
+                            /* Keyboard */
+button{
+    height: 60px;
+    width: 60px;
+    border: 0;
+    border-radius: 30px;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+button:hover{
+    transform: scale(1.1);
+}
+button#equal{
+    height: 130px;
+    background: #ecd0fe;
+}
+.btn-operator{
+    background: #a486b7;
+}
+.btn-number{
+    background: #F9AC66;
+}
