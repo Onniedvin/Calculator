@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
 </head>
+
 <body>
     <div class="container">
         <div class="calculator dark">
@@ -19,10 +20,11 @@
             <div class="buttons">
                 <table>
                     <tr>
-                        <td> <button class="btn-operator"id="clear">C</button> </td>
+                        <!-- UNICODES U+21BB, U+00F7, U+00D7, U+2190 -->
+                        <td> <button class="btn-operator"id="clear">&orarr;</button> </td>
                         <td> <button class="btn-operator"id="/">&divide;</button> </td>
                         <td> <button class="btn-operator"id="*">&times;</button> </td>
-                        <td> <button class="btn-operator"id="backspace"><</button> </td>
+                        <td> <button class="btn-operator"id="backspace">&larr;</button> </td>
                     </tr>
 
                     <tr>
@@ -55,7 +57,9 @@
             </div>
         </div>
     </div>
+
     <!-- Scripts -->
     <script src="script.js"></script>
+
 </body>
 </html>
